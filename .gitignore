@@ -39,3 +39,4 @@ __pycache__/
 *.mov
 *.wmv
 *.flv
+migrations
