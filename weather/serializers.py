@@ -2,14 +2,14 @@ from rest_framework import serializers
 
 class WeatherSerializer(serializers.Serializer):
     timestamp = serializers.DateTimeField()
-    temperature = serializers.DictField()  # {'air': float, 'soil': float}
+    temperature = serializers.DictField()
     humidity = serializers.FloatField()
     rainfall = serializers.FloatField()
     wind_speed = serializers.FloatField()
     uv_index = serializers.FloatField()
     soil_moisture = serializers.FloatField(allow_null=True)
 
-# Add these new serializers
+
 class CropRecommendationSerializer(serializers.Serializer):
     crop = serializers.CharField()
     score = serializers.FloatField()
